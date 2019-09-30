@@ -115,6 +115,14 @@
 
 
 
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/3d64b7fd.js","daovoice")
+  daovoice('init', {
+      app_id: "64974cdc"
+    });
+  daovoice('update');
+  </script>
+
 
 
 <script id="hexo.configurations">
@@ -141,6 +149,23 @@
   };
 </script>
 
+<script>
+    (function () {
+        if ('') {
+            if (prompt('请输入文章密码') !== '') {
+                alert('密码错误！');
+                if (history.length === 1) {
+                    location.replace("https://ligang-chn.github.io"); // 这里替换成你的首页
+                } else {
+                    history.back();
+                }
+            }
+        }
+    })();
+</script>
+
+
+
 
   
 
@@ -152,7 +177,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="SmartSpring框架 -- 05.常见问题">
 <meta property="og:url" content="https://ligang-chn.github.io/2018/04/18/smartcity-frame-common-problem/index.html">
-<meta property="og:site_name" content="LIGANG">
+<meta property="og:site_name" content="LiGang&#39;s Blog">
 <meta property="og:description" content="Q : 返回值 code 400405A : GET/POST请求使用错误。  Q : 消费者调用了别人的提供者服务，导致调试困难A : 这是怎么造成的呢？">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-06-19T23:53:12.000Z">
@@ -162,7 +187,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="LIGANG" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="LiGang's Blog" type="application/atom+xml">
 
 
 
@@ -178,7 +203,7 @@
   };
 </script>
 
-  <title>SmartSpring框架 -- 05.常见问题 | LIGANG</title>
+  <title>SmartSpring框架 -- 05.常见问题 | LiGang's Blog</title>
   
 
 
@@ -237,7 +262,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">LIGANG</span>
+        <span class="site-title">LiGang's Blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -349,6 +374,23 @@
     <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
 
   </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-photos">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/photos/" rel="section"><i class="menu-item-icon fa fa-fw fa-camera-retro"></i> <br>相册</a>
+
+  </li>
 
       
       
@@ -437,13 +479,13 @@
     <link itemprop="mainEntityOfPage" href="https://ligang-chn.github.io/2018/04/18/smartcity-frame-common-problem/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LIGANG">
-      <meta itemprop="description" content="机器学习，计算机网络">
+      <meta itemprop="name" content="小木子">
+      <meta itemprop="description" content="拥抱月亮">
       <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LIGANG">
+      <meta itemprop="name" content="LiGang's Blog">
     </span>
 
     
@@ -594,7 +636,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
@@ -602,20 +644,17 @@
         <h4 id="Q-返回值-code-400405"><a href="#Q-返回值-code-400405" class="headerlink" title="Q : 返回值 code 400405"></a>Q : 返回值 <em>code</em> 400405</h4><p><em>A</em> : GET/POST请求使用错误。 </p>
 <h4 id="Q-消费者调用了别人的提供者服务，导致调试困难"><a href="#Q-消费者调用了别人的提供者服务，导致调试困难" class="headerlink" title="Q : 消费者调用了别人的提供者服务，导致调试困难"></a>Q : 消费者调用了别人的提供者服务，导致调试困难</h4><p><em>A</em> : 这是怎么造成的呢？<a id="more"></a>服务版本号设置是<code>dubbo.service.version= 0.5_${user.name}</code>，<br>只要<code>user.name</code>不同，理论上是不会存在交叉调用情况的；<br> 但这个<code>user.name</code>其实是操作系统当前登陆的用户名，大多数人都是Administrator用户登陆的，<br> 因此会出现版本号相同的情况，dubbo默认的负载均衡策略为Random Loadbalance（随机均衡算法），此时就有可能调用到其他人的服务了。<br>怎样避免这种情况发生呢？修改 user.name</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">找到IDEA的安装目录，比如 C:\Program Files\JetBrains\IntelliJ IDEA 2017.2.3\bin </span><br><span class="line">用文本编辑器打开idea.exe.vmoptions（win32bit）和idea64.exe.vmoptions（win64bit），新建一行</span><br><span class="line">添加-Duser.name=your name</span><br></pre></td></tr></table></figure>
-
 <h4 id="Q-service-项目启动时，日志不停刷新内容：asyncTotalCount-false"><a href="#Q-service-项目启动时，日志不停刷新内容：asyncTotalCount-false" class="headerlink" title="Q : service 项目启动时，日志不停刷新内容：asyncTotalCount: {false}"></a>Q : <em>service</em> 项目启动时，日志不停刷新内容：<em>asyncTotalCount: {false}</em></h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">paginator.PageInterceptor - dialectClass: &#123;***.paginator.dialect.OracleDialect&#125; </span><br><span class="line">paginator.PageInterceptor - asyncTotalCount: &#123;<span class="keyword">false</span>&#125;</span><br></pre></td></tr></table></figure>
-
 <p><em>A</em> : 这是由于Mapper.xml中分页的sql有错误，检查近期提交的sql，特别是<code>parameterType</code>和<code>resultType</code></p>
 <h4 id="Q-service-项目启动时报错-object-is-not-an-instance-of-declaring-class"><a href="#Q-service-项目启动时报错-object-is-not-an-instance-of-declaring-class" class="headerlink" title="Q : service 项目启动时报错 object is not an instance of declaring class"></a>Q : <em>service</em> 项目启动时报错 <em>object is not an instance of declaring class</em></h4><p><em>A</em> : 这是由于接口类没有暴露方法，导致服务没有实例化。</p>
 <h4 id="Q-调用-dubbo-service-提供者的接口时报错-Failed-to-invoke-the-method"><a href="#Q-调用-dubbo-service-提供者的接口时报错-Failed-to-invoke-the-method" class="headerlink" title="Q : 调用 dubbo-service 提供者的接口时报错 Failed to invoke the method"></a>Q : 调用 <em>dubbo-service</em> 提供者的接口时报错 <em>Failed to invoke the method</em></h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">com.alibaba.dubbo.rpc.RpcExeptiom:Failed to invoke the method</span><br><span class="line">com.alibaba.dubbo.rpc.cluster.support.FailoverClusterInvoker.doInvoke(FailoverClusterInvoker.java:<span class="number">101</span>)</span><br></pre></td></tr></table></figure>
-
 <p><em>A</em> : 这是由于在zookeeper中没有找到服务提供者，请检查服务提供者是否正常启动、服务版本号是否正确、接口参数类型是否正确。<br> 必要时可参考dubbo-admin控制台信息。</p>
 <h4 id="Q-部署在-linux服务器上，service服务在zookeeper上注册的地址与服务器地址不一致。"><a href="#Q-部署在-linux服务器上，service服务在zookeeper上注册的地址与服务器地址不一致。" class="headerlink" title="Q : 部署在 linux服务器上，service服务在zookeeper上注册的地址与服务器地址不一致。"></a>Q : 部署在 <em>linux</em>服务器上，<em>service</em>服务在<em>zookeeper</em>上注册的地址与服务器地址不一致。</h4><p><em>A</em> : 可能是hosts ip 或者 DNS 设置错误</p>
 <ul>
 <li>检查<code>/etc/sysconfig/network</code>中的 <strong>HOSTNAME</strong> 与 <code>/etc/hosts</code>中的 <strong>${HOSTNAME}</strong> 对应的 hosts ip地址是否正确；</li>
 <li>检查<code>/etc/resolv.conf</code>中的 <strong>nameserver</strong> 对应的DNS地址是的正确。</li>
 </ul>
-<h4 id="Q-service-服务出现异常-java-io-IOException-Connection-reset-by-peer"><a href="#Q-service-服务出现异常-java-io-IOException-Connection-reset-by-peer" class="headerlink" title="Q : service*服务出现异常 *java.io.IOException: Connection reset by peer"></a>Q : <em>service*服务出现异常 *java.io.IOException: Connection reset by peer</em></h4><p><em>A</em> : 出现 Connection reset by peer 原因可能是多方面的，不过更常见的原因是</p>
+<h4 id="Q-service服务出现异常-java-io-IOException-Connection-reset-by-peer"><a href="#Q-service服务出现异常-java-io-IOException-Connection-reset-by-peer" class="headerlink" title="Q : service服务出现异常 java.io.IOException: Connection reset by peer"></a>Q : <em>service</em>服务出现异常 <em>java.io.IOException: Connection reset by peer</em></h4><p><em>A</em> : 出现 Connection reset by peer 原因可能是多方面的，不过更常见的原因是</p>
 <ul>
 <li>服务器的并发连接数超过了其承载量，服务器会将其中一些连接Down掉；</li>
 <li>客户关掉了浏览器，而服务器还在给客户端发送数据；</li>
@@ -658,6 +697,16 @@
 
     
 
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #FA8072;font-size:12px;">------------- EOF <i class="fa fa-hourglass-end" aria-hidden="true"></i> -------------</div>
+    
+</div>
+      
+    </div>
+
     
     
     
@@ -684,7 +733,7 @@
   <li class="post-copyright-title">
     <strong>本文标题：</strong>SmartSpring框架 -- 05.常见问题</li>
   <li class="post-copyright-author">
-    <strong>文章作者： </strong>LIGANG</li>
+    <strong>文章作者： </strong>小木子</li>
   <li class="post-copyright-link">
     <strong>原始链接：</strong>
     
@@ -790,10 +839,12 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="LIGANG">
+            <a href="/">
+              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="小木子">
+            </a>
             
-              <p class="site-author-name" itemprop="name">LIGANG</p>
-              <div class="site-description motion-element" itemprop="description">机器学习，计算机网络</div>
+              <p class="site-author-name" itemprop="name">小木子</p>
+              <div class="site-description motion-element" itemprop="description">拥抱月亮</div>
           </div>
 
           
@@ -803,7 +854,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -826,7 +877,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -869,7 +922,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -930,6 +989,7 @@
             </div>
           
 
+          
           <!-- 添加近期文章 -->
           
              <div class="links-of-blogroll motion-element links-of-blogroll-block">
@@ -940,6 +1000,10 @@
               </div>
               <ul class="links-of-blogroll-list">
                 
+                
+                  <li>
+                    <a href="/2019/09/30/KMP/" title="KMP算法" target="_blank">KMP算法</a>
+                  </li>
                 
                   <li>
                     <a href="/2019/06/17/spring-boot-autowired-by-condition/" title="Spring Boot - 根据配置动态注入Bean" target="_blank">Spring Boot - 根据配置动态注入Bean</a>
@@ -957,10 +1021,6 @@
                     <a href="/2019/05/19/hexo-function-optimization/" title="Hexo+NexT(v7.0+) 搭建博客：功能强化" target="_blank">Hexo+NexT(v7.0+) 搭建博客：功能强化</a>
                   </li>
                 
-                  <li>
-                    <a href="/2019/05/18/hexo-content-optimization/" title="Hexo+NexT(v7.0+) 搭建博客：内容优化" target="_blank">Hexo+NexT(v7.0+) 搭建博客：内容优化</a>
-                  </li>
-                
               </ul>
             </div>
           
@@ -976,6 +1036,9 @@
               <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
              </div>
           
+
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=38592976&auto=0&height=66"></iframe>
+
 
           
           
@@ -999,13 +1062,15 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Q-返回值-code-400405"><span class="nav-number">1.</span> <span class="nav-text">Q : 返回值 code 400405</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Q-消费者调用了别人的提供者服务，导致调试困难"><span class="nav-number">2.</span> <span class="nav-text">Q : 消费者调用了别人的提供者服务，导致调试困难</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Q-service-项目启动时，日志不停刷新内容：asyncTotalCount-false"><span class="nav-number">3.</span> <span class="nav-text">Q : service 项目启动时，日志不停刷新内容：asyncTotalCount: {false}</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Q-service-项目启动时报错-object-is-not-an-instance-of-declaring-class"><span class="nav-number">4.</span> <span class="nav-text">Q : service 项目启动时报错 object is not an instance of declaring class</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Q-调用-dubbo-service-提供者的接口时报错-Failed-to-invoke-the-method"><span class="nav-number">5.</span> <span class="nav-text">Q : 调用 dubbo-service 提供者的接口时报错 Failed to invoke the method</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Q-部署在-linux服务器上，service服务在zookeeper上注册的地址与服务器地址不一致。"><span class="nav-number">6.</span> <span class="nav-text">Q : 部署在 linux服务器上，service服务在zookeeper上注册的地址与服务器地址不一致。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Q-service-服务出现异常-java-io-IOException-Connection-reset-by-peer"><span class="nav-number">7.</span> <span class="nav-text">Q : service*服务出现异常 *java.io.IOException: Connection reset by peer</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Q-ajax请求接口返回信息是空，基本信息-flag、code、message都没有"><span class="nav-number">8.</span> <span class="nav-text">Q : ajax请求接口返回信息是空，基本信息 flag、code、message都没有</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Q-返回值-code-400405"><span class="nav-number">1.</span> <span class="nav-text">Q : 返回值 code 400405</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Q-消费者调用了别人的提供者服务，导致调试困难"><span class="nav-number">2.</span> <span class="nav-text">Q : 消费者调用了别人的提供者服务，导致调试困难</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Q-service-项目启动时，日志不停刷新内容：asyncTotalCount-false"><span class="nav-number">3.</span> <span class="nav-text">Q : service 项目启动时，日志不停刷新内容：asyncTotalCount: {false}</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Q-service-项目启动时报错-object-is-not-an-instance-of-declaring-class"><span class="nav-number">4.</span> <span class="nav-text">Q : service 项目启动时报错 object is not an instance of declaring class</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Q-调用-dubbo-service-提供者的接口时报错-Failed-to-invoke-the-method"><span class="nav-number">5.</span> <span class="nav-text">Q : 调用 dubbo-service 提供者的接口时报错 Failed to invoke the method</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Q-部署在-linux服务器上，service服务在zookeeper上注册的地址与服务器地址不一致。"><span class="nav-number">6.</span> <span class="nav-text">Q : 部署在 linux服务器上，service服务在zookeeper上注册的地址与服务器地址不一致。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Q-service服务出现异常-java-io-IOException-Connection-reset-by-peer"><span class="nav-number">7.</span> <span class="nav-text">Q : service服务出现异常 java.io.IOException: Connection reset by peer</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Q-ajax请求接口返回信息是空，基本信息-flag、code、message都没有"><span class="nav-number">8.</span> <span class="nav-text">Q : ajax请求接口返回信息是空，基本信息 flag、code、message都没有</span></a></li></ol></div>
             
 
           </div>
         </div>
       <!--/noindex-->
       
+
+
 
       
 
@@ -1121,7 +1186,16 @@
 
 
 
+  
+    
+    
+  
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="130" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
+
+
+  
+  
 
 
 
@@ -1144,6 +1218,12 @@
 
   
   <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+
+  
+  <script src="/lib/three/three.min.js"></script>
+
+  
+  <script src="/lib/three/three-waves.min.js"></script>
 
 
   
@@ -1551,6 +1631,13 @@
   
 
   
+  
+
+  
+  
+
+  
+
 
   
 
@@ -1659,5 +1746,10 @@
   
 
 <script type="text/javascript" src="/js/custom/hexo_resize_image.js"></script>
-</body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+  <script>
+    $("body").backstretch("https://github.com/ligang-chn/Blog_Back_Up/blob/master/source/chenyao.jpg");
+  </script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-miku"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
 </html>

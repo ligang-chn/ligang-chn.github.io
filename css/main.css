@@ -1874,7 +1874,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #feff6c;
+  background: #e5ff5b;
 }
 .feed-link,
 .chat {
@@ -2286,6 +2286,10 @@ ul.popular-posts .popular-posts-item .popular-posts-title {
 .highlight-wrap {
   position: relative;
 }
+.has-jax {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
 .page-archive .archive-page-counter {
   position: relative;
   top: 3px;
@@ -2688,6 +2692,22 @@ img.img-topic {
   border: none;
   padding: 0px;
 }
+.post-gallery .post-gallery-img img {
+  padding: 3px;
+}
+body::before {
+  background-image: url("https://github.com/ligang-chn/Blog_Back_Up/blob/master/source/chenyao.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  content: " ";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
 .btn {
   font-weight: 400;
   white-space: nowrap;
@@ -2735,17 +2755,17 @@ section.posts-expand .post-body .fancybox {
 .pagination .prev,
 .pagination .next,
 .pagination .page-number {
-  border: none;
+  border: 4px;
 }
 .post-button {
   margin-top: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 .post-button .btn {
-  font-size: 15px;
+  font-size: 13px;
 }
 .sidebar-toggle {
-  left: 30px;
+  left: 26px;
 }
 .sidebar {
   left: 0px;
@@ -2804,11 +2824,18 @@ span.exturl:hover {
   color: #1094e8;
 }
 .back-to-top .fa-arrow-up:before {
-  color: #93ffcb;
+  color: #49d458;
 }
 .highlight-wrap .copy-btn {
   padding: 1px 6px;
   top: 3px;
+}
+.post {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 15px;
+  -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
+  -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
 }
 span#inline-yellow {
   display: inline;

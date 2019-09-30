@@ -115,6 +115,14 @@
 
 
 
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/3d64b7fd.js","daovoice")
+  daovoice('init', {
+      app_id: "64974cdc"
+    });
+  daovoice('update');
+  </script>
+
 
 
 <script id="hexo.configurations">
@@ -141,27 +149,44 @@
   };
 </script>
 
+<script>
+    (function () {
+        if ('') {
+            if (prompt('请输入文章密码') !== '') {
+                alert('密码错误！');
+                if (history.length === 1) {
+                    location.replace("https://ligang-chn.github.io"); // 这里替换成你的首页
+                } else {
+                    history.back();
+                }
+            }
+        }
+    })();
+</script>
+
+
+
 
   
 
 
 
 
-  <meta name="description" content="机器学习，计算机网络">
-<meta name="keywords" content="C++,Python,Qt等">
+  <meta name="description" content="拥抱月亮">
+<meta name="keywords" content="技术,艺术,代码,生活">
 <meta property="og:type" content="website">
-<meta property="og:title" content="LIGANG">
+<meta property="og:title" content="LiGang&#39;s Blog">
 <meta property="og:url" content="https://ligang-chn.github.io/tags/NexT/index.html">
-<meta property="og:site_name" content="LIGANG">
-<meta property="og:description" content="机器学习，计算机网络">
+<meta property="og:site_name" content="LiGang&#39;s Blog">
+<meta property="og:description" content="拥抱月亮">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LIGANG">
-<meta name="twitter:description" content="机器学习，计算机网络">
+<meta name="twitter:title" content="LiGang&#39;s Blog">
+<meta name="twitter:description" content="拥抱月亮">
 
 
 
-  <link rel="alternate" href="/atom.xml" title="LIGANG" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="LiGang's Blog" type="application/atom+xml">
 
 
 
@@ -177,7 +202,7 @@
   };
 </script>
 
-  <title>标签: NexT | LIGANG</title>
+  <title>标签: NexT | LiGang's Blog</title>
   
 
 
@@ -236,7 +261,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">LIGANG</span>
+        <span class="site-title">LiGang's Blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -348,6 +373,23 @@
     <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
 
   </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-photos">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/photos/" rel="section"><i class="menu-item-icon fa fa-fw fa-camera-retro"></i> <br>相册</a>
+
+  </li>
 
       
       
@@ -366,6 +408,9 @@
     
 
     
+    
+      
+      
     
       
       
@@ -592,10 +637,12 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="LIGANG">
+            <a href="/">
+              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="小木子">
+            </a>
             
-              <p class="site-author-name" itemprop="name">LIGANG</p>
-              <div class="site-description motion-element" itemprop="description">机器学习，计算机网络</div>
+              <p class="site-author-name" itemprop="name">小木子</p>
+              <div class="site-description motion-element" itemprop="description">拥抱月亮</div>
           </div>
 
           
@@ -605,7 +652,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -628,7 +675,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -671,7 +720,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -732,6 +787,7 @@
             </div>
           
 
+          
           <!-- 添加近期文章 -->
           
              <div class="links-of-blogroll motion-element links-of-blogroll-block">
@@ -742,6 +798,10 @@
               </div>
               <ul class="links-of-blogroll-list">
                 
+                
+                  <li>
+                    <a href="/2019/09/30/KMP/" title="KMP算法" target="_blank">KMP算法</a>
+                  </li>
                 
                   <li>
                     <a href="/2019/06/17/spring-boot-autowired-by-condition/" title="Spring Boot - 根据配置动态注入Bean" target="_blank">Spring Boot - 根据配置动态注入Bean</a>
@@ -757,10 +817,6 @@
                 
                   <li>
                     <a href="/2019/05/19/hexo-function-optimization/" title="Hexo+NexT(v7.0+) 搭建博客：功能强化" target="_blank">Hexo+NexT(v7.0+) 搭建博客：功能强化</a>
-                  </li>
-                
-                  <li>
-                    <a href="/2019/05/18/hexo-content-optimization/" title="Hexo+NexT(v7.0+) 搭建博客：内容优化" target="_blank">Hexo+NexT(v7.0+) 搭建博客：内容优化</a>
                   </li>
                 
               </ul>
@@ -779,6 +835,9 @@
              </div>
           
 
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=38592976&auto=0&height=66"></iframe>
+
+
           
           
 
@@ -791,6 +850,8 @@
       </div>
 
       
+
+
 
       
 
@@ -906,7 +967,16 @@
 
 
 
+  
+    
+    
+  
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="130" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
+
+
+  
+  
 
 
 
@@ -929,6 +999,12 @@
 
   
   <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+
+  
+  <script src="/lib/three/three.min.js"></script>
+
+  
+  <script src="/lib/three/three-waves.min.js"></script>
 
 
   
@@ -1330,6 +1406,13 @@
   
 
   
+  
+
+  
+  
+
+  
+
 
   
 
@@ -1438,5 +1521,10 @@
   
 
 <script type="text/javascript" src="/js/custom/hexo_resize_image.js"></script>
-</body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+  <script>
+    $("body").backstretch("https://github.com/ligang-chn/Blog_Back_Up/blob/master/source/chenyao.jpg");
+  </script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-miku"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
 </html>

@@ -115,6 +115,14 @@
 
 
 
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/3d64b7fd.js","daovoice")
+  daovoice('init', {
+      app_id: "64974cdc"
+    });
+  daovoice('update');
+  </script>
+
 
 
 <script id="hexo.configurations">
@@ -141,6 +149,23 @@
   };
 </script>
 
+<script>
+    (function () {
+        if ('') {
+            if (prompt('请输入文章密码') !== '') {
+                alert('密码错误！');
+                if (history.length === 1) {
+                    location.replace("https://ligang-chn.github.io"); // 这里替换成你的首页
+                } else {
+                    history.back();
+                }
+            }
+        }
+    })();
+</script>
+
+
+
 
   
 
@@ -152,7 +177,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spring Boot - 根据配置动态注入Bean">
 <meta property="og:url" content="https://ligang-chn.github.io/2019/06/17/spring-boot-autowired-by-condition/index.html">
-<meta property="og:site_name" content="LIGANG">
+<meta property="og:site_name" content="LiGang&#39;s Blog">
 <meta property="og:description" content="在我们的实际业务开发过程中，往往会有这样的场景：  一套接口中有多种不同的实现，但在不同的场景下需使用指定的实现方式（比如微信小程序里仅仅支持微信支付） 在集群环境里，存在一个定时任务，定时任务不可重复执行，因此需限制只在一个节点中执行，其他节点不执行   常规思路中要实现以上的场景需求还是比较麻烦的，可能需要硬编码做 if 或者 swith 的判断，亦或是使用控制路由在调用的代码里做选择初始化。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-06-19T23:53:12.000Z">
@@ -162,7 +187,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="LIGANG" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="LiGang's Blog" type="application/atom+xml">
 
 
 
@@ -178,7 +203,7 @@
   };
 </script>
 
-  <title>Spring Boot - 根据配置动态注入Bean | LIGANG</title>
+  <title>Spring Boot - 根据配置动态注入Bean | LiGang's Blog</title>
   
 
 
@@ -237,7 +262,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">LIGANG</span>
+        <span class="site-title">LiGang's Blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -349,6 +374,23 @@
     <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
 
   </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-photos">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/photos/" rel="section"><i class="menu-item-icon fa fa-fw fa-camera-retro"></i> <br>相册</a>
+
+  </li>
 
       
       
@@ -437,13 +479,13 @@
     <link itemprop="mainEntityOfPage" href="https://ligang-chn.github.io/2019/06/17/spring-boot-autowired-by-condition/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LIGANG">
-      <meta itemprop="description" content="机器学习，计算机网络">
+      <meta itemprop="name" content="小木子">
+      <meta itemprop="description" content="拥抱月亮">
       <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LIGANG">
+      <meta itemprop="name" content="LiGang's Blog">
     </span>
 
     
@@ -594,7 +636,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
@@ -606,12 +648,10 @@
 </ul>
 <blockquote>
 <p>常规思路中要实现以上的场景需求还是比较麻烦的，可能需要硬编码做 <strong>if</strong> 或者 <strong>swith</strong> 的判断，亦或是使用控制路由在调用的代码里做选择初始化。这些方式都不够优雅，也增强了组件间的耦合性！！！<br>现在SpringBoot里有了 <code>@Conditional</code>注解 和 <code>@ConditionalOnProperty</code>注解，将变得简单许多。</p>
-</blockquote>
 <a id="more"></a>
-
+</blockquote>
 <h3 id="ConditionalOnProperty注解介绍"><a href="#ConditionalOnProperty注解介绍" class="headerlink" title="ConditionalOnProperty注解介绍"></a>ConditionalOnProperty注解介绍</h3><p>Spring4.X中新加入了注解<code>@Conditional</code>，可以实现不同条件创建不同的Bean。<br>SpringBoot框架中封装了注解<code>@ConditionalOnProperty</code>，它将配置信息转换成控制某个configuration是否生效的条件。</p>
 <h3 id="ConditionalOnProperty源码解析"><a href="#ConditionalOnProperty源码解析" class="headerlink" title="ConditionalOnProperty源码解析"></a>ConditionalOnProperty源码解析</h3><figure class="highlight java"><figcaption><span>springboot-autoconfigure.jar</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> org.springframework.boot.autoconfigure.condition;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="meta">@Target</span>(&#123; ElementType.TYPE, ElementType.METHOD &#125;)</span><br><span class="line"><span class="meta">@Documented</span></span><br><span class="line"><span class="meta">@Conditional</span>(OnPropertyCondition.class)</span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> ConditionalOnProperty &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * String数组 ，对应property名称的值，与name()不可同时使用，</span></span><br><span class="line"><span class="comment">    * 当 value() 所对应配置文件中的值为false时加载配置，不为fasle不加载配置</span></span><br><span class="line"><span class="comment">    * value() 有多个值时，只要有一个值对应为false,则不加载配置</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   String[] value() <span class="keyword">default</span> &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 配置中 property 的前缀，可有可无；可与 value 或 name 组合使用</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function">String <span class="title">prefix</span><span class="params">()</span> <span class="keyword">default</span> ""</span>;</span><br><span class="line"></span><br><span class="line">   <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * String数组 ，property完整名称或部分名称，与 value()作用一致但不可同时使用</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    String[] name() <span class="keyword">default</span> &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 比较获取到的属性值与 havingValue() 给定的值是否相同，相同才加载配置；需与 value 或 name 组合使用需</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function">String <span class="title">havingValue</span><span class="params">()</span> <span class="keyword">default</span> ""</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 配置中缺少对应 property 时是否可以加载；为true时缺少对应配置也可加载</span></span><br><span class="line"><span class="comment">    */</span> </span><br><span class="line">    <span class="function"><span class="keyword">boolean</span> <span class="title">matchIfMissing</span><span class="params">()</span> <span class="keyword">default</span> <span class="keyword">false</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>由此可见：它主要通过几个属性值来实现：</p>
 <ul>
 <li>prefix：属性-配置前缀，可不填；</li>
@@ -621,17 +661,12 @@
 <div class="note info">
             <p>根据 name 在 application.yml 中获取属性的值，该值与havingValue的值比较，与其相等则当前configuration生效加载此Bean，否则则不生效。当name的值在application.yml 中不存在则返回false。</p>
           </div>
-
 <h3 id="code示例"><a href="#code示例" class="headerlink" title="code示例"></a>code示例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">IPayService</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">pay</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@ConditionalOnProperty</span>(prefix = <span class="string">"pay"</span>, name = <span class="string">"type"</span>, havingValue = <span class="string">"alipay"</span>)</span><br><span class="line"><span class="meta">@Service</span>(<span class="string">"payService"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AliPayServiceImlp</span> <span class="keyword">implements</span> <span class="title">IPayService</span> </span>&#123;</span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">pay</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    log.info(<span class="string">"=====&gt;&gt;&gt;&gt;&gt;使用支付宝支付"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@ConditionalOnProperty</span>(prefix = <span class="string">"pay"</span>, name = <span class="string">"type"</span>, havingValue = <span class="string">"weixin"</span>)</span><br><span class="line"><span class="meta">@Service</span>(<span class="string">"payService"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WinxinPayServiceImpl</span> <span class="keyword">implements</span> <span class="title">IPayService</span> </span>&#123;</span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">pay</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    log.info(<span class="string">"=====&gt;&gt;&gt;&gt;&gt;使用微信支付"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@RequestMapping</span>(path = <span class="string">"test"</span>)</span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TempRestController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Autowired</span></span><br><span class="line">  IPayService payService;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@PostMapping</span>(path = <span class="string">"pay"</span>)</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">pay</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    payService.pay();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>在指定的节点配置 pay.type=alipay 或者 weixin</p>
 <figure class="highlight plain"><figcaption><span>application.properties</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pay.type = alipay</span><br><span class="line">----------</span><br><span class="line">pay.type = weixin</span><br></pre></td></tr></table></figure>
-
 <h3 id="code示例2"><a href="#code示例2" class="headerlink" title="code示例2"></a>code示例2</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ConditionalOnProperty</span>(prefix = <span class="string">"scheduling"</span>, name = <span class="string">"enabled"</span>, havingValue = <span class="string">"true"</span>)</span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WorkTimer</span> </span>&#123;</span><br><span class="line">  <span class="meta">@Scheduled</span>(cron = <span class="string">"0/5 * * * * *"</span>)</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">scheduled</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>在指定的节点加上配置 scheduling.enabled=true，其余节点加上配置scheduling.enabled=false </p>
 <figure class="highlight plain"><figcaption><span>application.properties</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scheduling.enabled = false   （或为空，此时定时任务不生效）</span><br><span class="line">----------</span><br><span class="line">scheduling.enabled = true    （此时定时任务生效）</span><br></pre></td></tr></table></figure>
-
 <h3 id="知识拓展"><a href="#知识拓展" class="headerlink" title="知识拓展"></a>知识拓展</h3><p>ConditionalOnProperty注解只能解决简单配置的动态注入，下面还有几种常用的条件注解使用方式，有兴趣的同学可以继续深入学习：</p>
 <ul>
 <li><p>@ConditionalOnBean：基于Bean的条件注解，根据Bean是否存在来判断是否满足条件。（可用于Bean之间相互依赖的场景）</p>
@@ -673,6 +708,16 @@
 
     
 
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #FA8072;font-size:12px;">------------- EOF <i class="fa fa-hourglass-end" aria-hidden="true"></i> -------------</div>
+    
+</div>
+      
+    </div>
+
     
     
     
@@ -699,7 +744,7 @@
   <li class="post-copyright-title">
     <strong>本文标题：</strong>Spring Boot - 根据配置动态注入Bean</li>
   <li class="post-copyright-author">
-    <strong>文章作者： </strong>LIGANG</li>
+    <strong>文章作者： </strong>小木子</li>
   <li class="post-copyright-link">
     <strong>原始链接：</strong>
     
@@ -744,6 +789,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/09/30/KMP/" rel="prev" title="KMP算法">
+                KMP算法 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -805,10 +854,12 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="LIGANG">
+            <a href="/">
+              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="小木子">
+            </a>
             
-              <p class="site-author-name" itemprop="name">LIGANG</p>
-              <div class="site-description motion-element" itemprop="description">机器学习，计算机网络</div>
+              <p class="site-author-name" itemprop="name">小木子</p>
+              <div class="site-description motion-element" itemprop="description">拥抱月亮</div>
           </div>
 
           
@@ -818,7 +869,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -841,7 +892,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -884,7 +937,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -945,6 +1004,7 @@
             </div>
           
 
+          
           <!-- 添加近期文章 -->
           
              <div class="links-of-blogroll motion-element links-of-blogroll-block">
@@ -955,6 +1015,10 @@
               </div>
               <ul class="links-of-blogroll-list">
                 
+                
+                  <li>
+                    <a href="/2019/09/30/KMP/" title="KMP算法" target="_blank">KMP算法</a>
+                  </li>
                 
                   <li>
                     <a href="/2019/06/17/spring-boot-autowired-by-condition/" title="Spring Boot - 根据配置动态注入Bean" target="_blank">Spring Boot - 根据配置动态注入Bean</a>
@@ -972,10 +1036,6 @@
                     <a href="/2019/05/19/hexo-function-optimization/" title="Hexo+NexT(v7.0+) 搭建博客：功能强化" target="_blank">Hexo+NexT(v7.0+) 搭建博客：功能强化</a>
                   </li>
                 
-                  <li>
-                    <a href="/2019/05/18/hexo-content-optimization/" title="Hexo+NexT(v7.0+) 搭建博客：内容优化" target="_blank">Hexo+NexT(v7.0+) 搭建博客：内容优化</a>
-                  </li>
-                
               </ul>
             </div>
           
@@ -991,6 +1051,9 @@
               <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
              </div>
           
+
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=38592976&auto=0&height=66"></iframe>
+
 
           
           
@@ -1021,6 +1084,8 @@
         </div>
       <!--/noindex-->
       
+
+
 
       
 
@@ -1136,7 +1201,16 @@
 
 
 
+  
+    
+    
+  
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="130" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
+
+
+  
+  
 
 
 
@@ -1159,6 +1233,12 @@
 
   
   <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+
+  
+  <script src="/lib/three/three.min.js"></script>
+
+  
+  <script src="/lib/three/three-waves.min.js"></script>
 
 
   
@@ -1566,6 +1646,13 @@
   
 
   
+  
+
+  
+  
+
+  
+
 
   
 
@@ -1674,5 +1761,10 @@
   
 
 <script type="text/javascript" src="/js/custom/hexo_resize_image.js"></script>
-</body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+  <script>
+    $("body").backstretch("https://github.com/ligang-chn/Blog_Back_Up/blob/master/source/chenyao.jpg");
+  </script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-miku"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
 </html>

@@ -115,6 +115,14 @@
 
 
 
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/3d64b7fd.js","daovoice")
+  daovoice('init', {
+      app_id: "64974cdc"
+    });
+  daovoice('update');
+  </script>
+
 
 
 <script id="hexo.configurations">
@@ -141,27 +149,44 @@
   };
 </script>
 
+<script>
+    (function () {
+        if ('') {
+            if (prompt('请输入文章密码') !== '') {
+                alert('密码错误！');
+                if (history.length === 1) {
+                    location.replace("https://ligang-chn.github.io"); // 这里替换成你的首页
+                } else {
+                    history.back();
+                }
+            }
+        }
+    })();
+</script>
+
+
+
 
   
 
 
 
 
-  <meta name="description" content="机器学习，计算机网络">
-<meta name="keywords" content="C++,Python,Qt等">
+  <meta name="description" content="拥抱月亮">
+<meta name="keywords" content="技术,艺术,代码,生活">
 <meta property="og:type" content="website">
-<meta property="og:title" content="LIGANG">
+<meta property="og:title" content="LiGang&#39;s Blog">
 <meta property="og:url" content="https://ligang-chn.github.io/index.html">
-<meta property="og:site_name" content="LIGANG">
-<meta property="og:description" content="机器学习，计算机网络">
+<meta property="og:site_name" content="LiGang&#39;s Blog">
+<meta property="og:description" content="拥抱月亮">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LIGANG">
-<meta name="twitter:description" content="机器学习，计算机网络">
+<meta name="twitter:title" content="LiGang&#39;s Blog">
+<meta name="twitter:description" content="拥抱月亮">
 
 
 
-  <link rel="alternate" href="/atom.xml" title="LIGANG" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="LiGang's Blog" type="application/atom+xml">
 
 
 
@@ -177,7 +202,7 @@
   };
 </script>
 
-  <title>LIGANG</title>
+  <title>LiGang's Blog</title>
   
 
 
@@ -237,7 +262,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">LIGANG</span>
+        <span class="site-title">LiGang's Blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -349,6 +374,23 @@
     <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
 
   </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-photos">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/photos/" rel="section"><i class="menu-item-icon fa fa-fw fa-camera-retro"></i> <br>相册</a>
+
+  </li>
 
       
       
@@ -434,16 +476,234 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ligang-chn.github.io/2019/04/29/hexo-satrted/">
+    <link itemprop="mainEntityOfPage" href="https://ligang-chn.github.io/2019/09/30/KMP/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LIGANG">
-      <meta itemprop="description" content="机器学习，计算机网络">
+      <meta itemprop="name" content="小木子">
+      <meta itemprop="description" content="拥抱月亮">
       <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LIGANG">
+      <meta itemprop="name" content="LiGang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/09/30/KMP/" class="post-title-link" itemprop="url">KMP算法</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <i class="fa fa-thumb-tack"></i>
+              <font color="7D26CD">置顶</font>
+              <span class="post-meta-divider">|</span>
+            
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-30 22:16:23 / 修改时间：20:49:47" itemprop="dateCreated datePublished" datetime="2019-09-30T22:16:23+08:00">2019-09-30</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据结构/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+            <span id="/2019/09/30/KMP/" class="leancloud_visitors" data-flag-title="KMP算法">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">8.3k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">8 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+      
+      
+      
+
+      
+        
+          
+            <p>@<a href="KMP模式匹配算法">TOC</a><br>学习到串这一章，碰到一个不太好理解的算法，记录一下。</p>
+<p>数据结构：<strong>串</strong>；</p>
+<p>字串的<strong>定位操作</strong>通常称为串的模式匹配，算是串中最重要的操作之一。这里主要讲一下KMP模式匹配算法（即<strong>克努特-莫里斯-普拉特算法</strong>）。</p>
+<h2 id="1、前缀值求解"><a href="#1、前缀值求解" class="headerlink" title="1、前缀值求解"></a>1、前缀值求解</h2><p>在进行KMP算法操作之前需要求解将要匹配的字符串的<strong>前缀值</strong>，表现为一个前缀数组。（有些书中称为next数组）<br><strong>第一步，前缀表</strong><br>下面是即将要匹配的字符串，先写出前缀表：<br><img src="https://img-blog.csdnimg.cn/20190327103519635.png#pic_center =200x200" alt="在这里插入图片描述"><br><strong>第二步，求出前缀值</strong><br>把每个前缀当成独立的字符串，找出最长的公共的前后缀，并且这个前后缀是比原始字符串要短；<br><img src="https://img-blog.csdnimg.cn/20190327103954172.png#pic_center =500x250" alt="在这里插入图片描述"><br>然后，将最后一行删除，因为最后的字符串就是其本身，同时在最前面添加一个-1。<br>这样就构成了前缀数组：-1，0，0，1，2；</p>
+<p><strong>进行匹配</strong><br><img src="https://img-blog.csdnimg.cn/20190327104404752.png#pic_center =500x250" alt="在这里插入图片描述"><br>当出现匹配失败时（如上图），查找失配位置的前缀值，比如上图匹配a和b失败，当前的前缀值是1（即图中红色的圆圈处），所以转到匹配字符串下标为1的位置（即图中绿色的圆圈处）。<br>此时，将P串后移，使得红叉和绿圈对齐，从这里继续开始匹配。<br>绿圈之前的字符不再需要匹配，因为前面一定是匹配的，不需要验证了。（这就是KMP算法相对于朴素匹配算法的优势）<br><strong>第三步，前缀实现</strong><br>下图是前缀值求解的算法图解：<br><img src="https://img-blog.csdnimg.cn/20190327105635605.png#pic_center =600x300" alt="在这里插入图片描述"><br>在上图中，下标为6的位置的前缀值怎么求解？</p>
+<p><img src="https://img-blog.csdnimg.cn/20190327105221318.png#pic_center =600x300" alt="在这里插入图片描述"><br>通过观察6位置之前的字符串，发现5处的前缀值为1，要使6处的前缀值为2，只有其位置的字符为B。所以，需要做的就是检查一下，6处的字符是不是B。<br>len——字符串达到的最大的长度；<br>其实现为：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 前缀实现</span></span><br><span class="line"><span class="keyword">void</span> prefix_table(char pattern[], int prefix[], int n) &#123;</span><br><span class="line">	prefix[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">	int len = <span class="number">0</span>;</span><br><span class="line">	int i = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> (i &lt; n) &#123;</span><br><span class="line">		<span class="keyword">if</span> (pattern[i] == pattern[len]) &#123;</span><br><span class="line">			len++;</span><br><span class="line">			prefix[i] = len;</span><br><span class="line">			i++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">if</span> (len &gt; <span class="number">0</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				len = prefix[len - <span class="number">1</span>];</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> &#123;</span><br><span class="line">				prefix[i] = len;</span><br><span class="line">				i++;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将前缀数组后后移一位，方便后面KMP算法计算</span></span><br><span class="line"><span class="keyword">void</span> move_prefix_table(int prefix[], int n)</span><br><span class="line">&#123;</span><br><span class="line">	int i;</span><br><span class="line">	<span class="keyword">for</span> (i = n - <span class="number">1</span>; i &gt; <span class="number">0</span>; i--)</span><br><span class="line">	&#123;</span><br><span class="line">		prefix[i] = prefix[i - <span class="number">1</span>];</span><br><span class="line">	&#125;</span><br><span class="line">	prefix[<span class="number">0</span>] = <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="2、KMP实现"><a href="#2、KMP实现" class="headerlink" title="2、KMP实现"></a>2、KMP实现</h2><p><img src="https://img-blog.csdnimg.cn/20190327112544238.png#pic_center =600x300" alt="在这里插入图片描述"><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> kmp_search(char text[], char pattern[])</span><br><span class="line">&#123;</span><br><span class="line">	int n = strlen(pattern);  <span class="comment">//计算字符串长度</span></span><br><span class="line">	int * prefix = malloc(sizeof(int) * n);<span class="comment">//内存分配</span></span><br><span class="line">	prefix_table(pattern, prefix, n);<span class="comment">//前缀表求解</span></span><br><span class="line">	move_prefix_table(prefix, n);<span class="comment">//前缀表移位</span></span><br><span class="line">	<span class="comment">//text[i]   ,len(text)   =m;</span></span><br><span class="line">	<span class="comment">//pattern[j],len(pattrn) =n;</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> (i &lt; m) &#123;</span><br><span class="line">		<span class="keyword">if</span> (j == n - <span class="number">1</span> &amp;&amp; text[i] == pattern[j])</span><br><span class="line">		&#123;</span><br><span class="line">			printf(<span class="string">"Found pattern at %d\n"</span>, i - j);</span><br><span class="line">			j = prefix[j];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (text[i] == pattern[j]) &#123;</span><br><span class="line">			i++;</span><br><span class="line">			j++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> &#123;</span><br><span class="line">			j = prefix[j];</span><br><span class="line">			<span class="keyword">if</span> (j == <span class="number">-1</span>) &#123;</span><br><span class="line">				i++;</span><br><span class="line">				j++;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="3、参考"><a href="#3、参考" class="headerlink" title="3、参考"></a>3、参考</h2><p>视频：<a href="https://www.bilibili.com/video/av11866460/?spm_id_from=333.788.videocard.0" target="_blank" rel="noopener">https://www.bilibili.com/video/av11866460/?spm_id_from=333.788.videocard.0</a><br>书籍：大话数据结构</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    <div>
+      
+    </div>
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ligang-chn.github.io/2019/04/29/hexo-satrted/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小木子">
+      <meta itemprop="description" content="拥抱月亮">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LiGang's Blog">
     </span>
 
     
@@ -501,7 +761,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-09-30 17:27:39" itemprop="dateModified" datetime="2019-09-30T17:27:39+08:00">2019-09-30</time>
+                <time title="修改时间：2019-09-30 19:23:43" itemprop="dateModified" datetime="2019-09-30T19:23:43+08:00">2019-09-30</time>
               
             
           </span>
@@ -587,7 +847,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
@@ -595,10 +855,6 @@
         
           <p><img src="https://image.chingow.cn/background/006tNc79gy1g37jxk0kq5j327a0ki0th.jpg" alt="Hexo" title="Hexo"></p>
 <p>关于如何搭建Hexo博客的文章已经有很多人写过了，并且有很多人已经写的很深刻很到位了，为什么还要重复写一遍呢？直到我看到了这位同学的博客 <a href="yearito.cn">yearito</a> <strong>（ ps：本站的建站优化大都参考自这里）</strong> ，我有了说服自己的理由：</p>
-<ul>
-<li>你可以参考别人的技术方案，集众所长，亲自实践，然后融入自己的思考写出一篇新文章</li>
-<li>即使并没有做出创新性的贡献，自己重新归纳一遍也有助于梳理流程，深化理解</li>
-</ul>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -613,6 +869,10 @@
     </div>
 
     
+
+    <div>
+      
+    </div>
 
     
     
@@ -665,13 +925,13 @@
     <link itemprop="mainEntityOfPage" href="https://ligang-chn.github.io/2019/06/17/spring-boot-autowired-by-condition/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LIGANG">
-      <meta itemprop="description" content="机器学习，计算机网络">
+      <meta itemprop="name" content="小木子">
+      <meta itemprop="description" content="拥抱月亮">
       <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LIGANG">
+      <meta itemprop="name" content="LiGang's Blog">
     </span>
 
     
@@ -811,7 +1071,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
@@ -824,7 +1084,6 @@
 </ul>
 <blockquote>
 <p>常规思路中要实现以上的场景需求还是比较麻烦的，可能需要硬编码做 <strong>if</strong> 或者 <strong>swith</strong> 的判断，亦或是使用控制路由在调用的代码里做选择初始化。这些方式都不够优雅，也增强了组件间的耦合性！！！<br>现在SpringBoot里有了 <code>@Conditional</code>注解 和 <code>@ConditionalOnProperty</code>注解，将变得简单许多。</p>
-</blockquote>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -836,9 +1095,13 @@
           <!--/noindex-->
         
       
-    </div>
+    </blockquote></div>
 
     
+
+    <div>
+      
+    </div>
 
     
     
@@ -891,13 +1154,13 @@
     <link itemprop="mainEntityOfPage" href="https://ligang-chn.github.io/2019/06/12/spring-boot-configure-external/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LIGANG">
-      <meta itemprop="description" content="机器学习，计算机网络">
+      <meta itemprop="name" content="小木子">
+      <meta itemprop="description" content="拥抱月亮">
       <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LIGANG">
+      <meta itemprop="name" content="LiGang's Blog">
     </span>
 
     
@@ -1037,7 +1300,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
@@ -1045,10 +1308,10 @@
         
           <p>Spring Boot启动会加载大量的自动配置类，相比以前 XML 的配置方式，很多显式方式申明是不需要的，从而可以更快速的开发。</p>
 <blockquote>
-<p>Spring Boot的配置文件有两种：*<em>.properties *</em>文件和 *<em>.yml *</em>文件。<br>使用固定的 <code>application.properties</code> 或者 <code>application.yml</code> 文件做为全局的配置文件，启动时会扫描它们作为默认配置文件。</p>
+<p>Spring Boot的配置文件有两种：<strong>.properties </strong>文件和 <strong>.yml </strong>文件。<br>使用固定的 <code>application.properties</code> 或者 <code>application.yml</code> 文件做为全局的配置文件，启动时会扫描它们作为默认配置文件。</p>
 <p>在很多场景下，我们需要去修改配置文件，如：端口、数据库地址等等。把所有配置全都打在包里，显然不是最好的做法，更常见的做法是把配置文件放在外面，可以在需要时不动代码的前提下修改配置。</p>
 </blockquote>
-<p>本文章将介绍如何自定义Sping Boot配置文件的位置。</p>
+<p>本文章将介绍如何自定义Sping Boot配置文件的位置。<br>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -1060,9 +1323,13 @@
           <!--/noindex-->
         
       
-    </div>
+    </p></div>
 
     
+
+    <div>
+      
+    </div>
 
     
     
@@ -1115,13 +1382,13 @@
     <link itemprop="mainEntityOfPage" href="https://ligang-chn.github.io/2019/05/20/hexo-performance-optimization/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LIGANG">
-      <meta itemprop="description" content="机器学习，计算机网络">
+      <meta itemprop="name" content="小木子">
+      <meta itemprop="description" content="拥抱月亮">
       <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LIGANG">
+      <meta itemprop="name" content="LiGang's Blog">
     </span>
 
     
@@ -1232,7 +1499,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">13k</span>
+                <span title="本文字数">14k</span>
               
 
               
@@ -1246,7 +1513,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">12 分钟</span>
+                <span title="阅读时长">13 分钟</span>
               
             </div>
           
@@ -1261,7 +1528,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
@@ -1287,6 +1554,10 @@
     </div>
 
     
+
+    <div>
+      
+    </div>
 
     
     
@@ -1339,13 +1610,13 @@
     <link itemprop="mainEntityOfPage" href="https://ligang-chn.github.io/2019/05/19/hexo-function-optimization/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LIGANG">
-      <meta itemprop="description" content="机器学习，计算机网络">
+      <meta itemprop="name" content="小木子">
+      <meta itemprop="description" content="拥抱月亮">
       <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LIGANG">
+      <meta itemprop="name" content="LiGang's Blog">
     </span>
 
     
@@ -1485,7 +1756,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
@@ -1514,6 +1785,10 @@
     </li></ul></div>
 
     
+
+    <div>
+      
+    </div>
 
     
     
@@ -1566,13 +1841,13 @@
     <link itemprop="mainEntityOfPage" href="https://ligang-chn.github.io/2019/05/18/hexo-content-optimization/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LIGANG">
-      <meta itemprop="description" content="机器学习，计算机网络">
+      <meta itemprop="name" content="小木子">
+      <meta itemprop="description" content="拥抱月亮">
       <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LIGANG">
+      <meta itemprop="name" content="LiGang's Blog">
     </span>
 
     
@@ -1712,7 +1987,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
@@ -1741,6 +2016,10 @@
     </li></ul></div>
 
     
+
+    <div>
+      
+    </div>
 
     
     
@@ -1793,13 +2072,13 @@
     <link itemprop="mainEntityOfPage" href="https://ligang-chn.github.io/2019/05/17/hexo-theme-beautifed/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LIGANG">
-      <meta itemprop="description" content="机器学习，计算机网络">
+      <meta itemprop="name" content="小木子">
+      <meta itemprop="description" content="拥抱月亮">
       <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LIGANG">
+      <meta itemprop="name" content="LiGang's Blog">
     </span>
 
     
@@ -1939,7 +2218,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
@@ -1952,7 +2231,7 @@
 <li>Footer：备案显示、运行时间、访客统计</li>
 <li>Sidebar：近期文章、浏览进度、左边显示、目录展开</li>
 </ul>
-<p>大家可以选择喜欢的方案美化自己的博客，当然最好可以再加入点自己的想法改造。</p>
+<p>大家可以选择喜欢的方案美化自己的博客，当然最好可以再加入点自己的想法改造。<br>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -1964,9 +2243,13 @@
           <!--/noindex-->
         
       
-    </div>
+    </p></div>
 
     
+
+    <div>
+      
+    </div>
 
     
     
@@ -2019,13 +2302,13 @@
     <link itemprop="mainEntityOfPage" href="https://ligang-chn.github.io/2018/04/18/smartcity-frame-Introduction/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LIGANG">
-      <meta itemprop="description" content="机器学习，计算机网络">
+      <meta itemprop="name" content="小木子">
+      <meta itemprop="description" content="拥抱月亮">
       <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LIGANG">
+      <meta itemprop="name" content="LiGang's Blog">
     </span>
 
     
@@ -2136,7 +2419,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">4.9k</span>
+                <span title="本文字数">5.2k</span>
               
 
               
@@ -2150,7 +2433,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">4 分钟</span>
+                <span title="阅读时长">5 分钟</span>
               
             </div>
           
@@ -2165,7 +2448,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
@@ -2189,6 +2472,10 @@
     </div>
 
     
+
+    <div>
+      
+    </div>
 
     
     
@@ -2241,13 +2528,13 @@
     <link itemprop="mainEntityOfPage" href="https://ligang-chn.github.io/2018/04/18/smartcity-frame-development-guide/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LIGANG">
-      <meta itemprop="description" content="机器学习，计算机网络">
+      <meta itemprop="name" content="小木子">
+      <meta itemprop="description" content="拥抱月亮">
       <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LIGANG">
+      <meta itemprop="name" content="LiGang's Blog">
     </span>
 
     
@@ -2387,7 +2674,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
@@ -2415,227 +2702,9 @@
 
     
 
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ligang-chn.github.io/2018/04/18/smartcity-frame-development-description/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LIGANG">
-      <meta itemprop="description" content="机器学习，计算机网络">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LIGANG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/04/18/smartcity-frame-development-description/" class="post-title-link" itemprop="url">SmartSpring框架 -- 03.开发说明</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-04-18 15:16:26" itemprop="dateCreated datePublished" datetime="2018-04-18T15:16:26+08:00">2018-04-18</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-06-20 07:53:12" itemprop="dateModified" datetime="2019-06-20T07:53:12+08:00">2019-06-20</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/框架/" itemprop="url" rel="index"><span itemprop="name">框架</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-            <span id="/2018/04/18/smartcity-frame-development-description/" class="leancloud_visitors" data-flag-title="SmartSpring框架 -- 03.开发说明">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">68k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">1:01</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>本篇主要讲解项目的基本结构以及各个主要功能点的开发示例。</p>
-<blockquote>
-<p>由于本项目主要使用阿里的<code>Dubbo</code>来做为开发架构，因此也可用于Dubbo开发者学习。</p>
-</blockquote>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/04/18/smartcity-frame-development-description/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
+    <div>
       
     </div>
-
-    
 
     
     
@@ -2705,10 +2774,12 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="LIGANG">
+            <a href="/">
+              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="小木子">
+            </a>
             
-              <p class="site-author-name" itemprop="name">LIGANG</p>
-              <div class="site-description motion-element" itemprop="description">机器学习，计算机网络</div>
+              <p class="site-author-name" itemprop="name">小木子</p>
+              <div class="site-description motion-element" itemprop="description">拥抱月亮</div>
           </div>
 
           
@@ -2718,7 +2789,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2741,7 +2812,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -2784,7 +2857,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -2845,6 +2924,7 @@
             </div>
           
 
+          
           <!-- 添加近期文章 -->
           
              <div class="links-of-blogroll motion-element links-of-blogroll-block">
@@ -2855,6 +2935,10 @@
               </div>
               <ul class="links-of-blogroll-list">
                 
+                
+                  <li>
+                    <a href="/2019/09/30/KMP/" title="KMP算法" target="_blank">KMP算法</a>
+                  </li>
                 
                   <li>
                     <a href="/2019/06/17/spring-boot-autowired-by-condition/" title="Spring Boot - 根据配置动态注入Bean" target="_blank">Spring Boot - 根据配置动态注入Bean</a>
@@ -2870,10 +2954,6 @@
                 
                   <li>
                     <a href="/2019/05/19/hexo-function-optimization/" title="Hexo+NexT(v7.0+) 搭建博客：功能强化" target="_blank">Hexo+NexT(v7.0+) 搭建博客：功能强化</a>
-                  </li>
-                
-                  <li>
-                    <a href="/2019/05/18/hexo-content-optimization/" title="Hexo+NexT(v7.0+) 搭建博客：内容优化" target="_blank">Hexo+NexT(v7.0+) 搭建博客：内容优化</a>
                   </li>
                 
               </ul>
@@ -2892,6 +2972,9 @@
              </div>
           
 
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=38592976&auto=0&height=66"></iframe>
+
+
           
           
 
@@ -2904,6 +2987,8 @@
       </div>
 
       
+
+
 
       
 
@@ -3019,7 +3104,16 @@
 
 
 
+  
+    
+    
+  
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="130" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
+
+
+  
+  
 
 
 
@@ -3042,6 +3136,12 @@
 
   
   <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+
+  
+  <script src="/lib/three/three.min.js"></script>
+
+  
+  <script src="/lib/three/three-waves.min.js"></script>
 
 
   
@@ -3443,6 +3543,35 @@
   
 
   
+  
+
+  
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+
+  
+
 
   
 
@@ -3551,5 +3680,10 @@
   
 
 <script type="text/javascript" src="/js/custom/hexo_resize_image.js"></script>
-</body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+  <script>
+    $("body").backstretch("https://github.com/ligang-chn/Blog_Back_Up/blob/master/source/chenyao.jpg");
+  </script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-miku"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
 </html>
