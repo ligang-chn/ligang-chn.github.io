@@ -172,13 +172,13 @@
 
 
 
-  <meta name="description" content="@TOC学习到串这一章，碰到一个不太好理解的算法，记录一下。 数据结构：串； 字串的定位操作通常称为串的模式匹配，算是串中最重要的操作之一。这里主要讲一下KMP模式匹配算法（即克努特-莫里斯-普拉特算法）。 1、前缀值求解在进行KMP算法操作之前需要求解将要匹配的字符串的前缀值，表现为一个前缀数组。（有些书中称为next数组）第一步，前缀表下面是即将要匹配的字符串，先写出前缀表：第二步，求出前缀值">
+  <meta name="description" content="@TOC学习到串这一章，碰到一个不太好理解的算法，记录一下。 数据结构：串； 字串的定位操作通常称为串的模式匹配，算是串中最重要的操作之一。这里主要讲一下KMP模式匹配算法（即克努特-莫里斯-普拉特算法）。">
 <meta name="keywords" content="数据结构,KMP,C++">
 <meta property="og:type" content="article">
 <meta property="og:title" content="KMP算法">
 <meta property="og:url" content="https://ligang-chn.github.io/2019/09/30/KMP/index.html">
 <meta property="og:site_name" content="LiGang&#39;s Blog">
-<meta property="og:description" content="@TOC学习到串这一章，碰到一个不太好理解的算法，记录一下。 数据结构：串； 字串的定位操作通常称为串的模式匹配，算是串中最重要的操作之一。这里主要讲一下KMP模式匹配算法（即克努特-莫里斯-普拉特算法）。 1、前缀值求解在进行KMP算法操作之前需要求解将要匹配的字符串的前缀值，表现为一个前缀数组。（有些书中称为next数组）第一步，前缀表下面是即将要匹配的字符串，先写出前缀表：第二步，求出前缀值">
+<meta property="og:description" content="@TOC学习到串这一章，碰到一个不太好理解的算法，记录一下。 数据结构：串； 字串的定位操作通常称为串的模式匹配，算是串中最重要的操作之一。这里主要讲一下KMP模式匹配算法（即克努特-莫里斯-普拉特算法）。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190327103519635.png#pic_center =200x200">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190327103954172.png#pic_center =500x250">
@@ -186,10 +186,10 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190327105635605.png#pic_center =600x300">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190327105221318.png#pic_center =600x300">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190327112544238.png#pic_center =600x300">
-<meta property="og:updated_time" content="2019-09-30T12:49:47.399Z">
+<meta property="og:updated_time" content="2019-09-30T13:17:35.844Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="KMP算法">
-<meta name="twitter:description" content="@TOC学习到串这一章，碰到一个不太好理解的算法，记录一下。 数据结构：串； 字串的定位操作通常称为串的模式匹配，算是串中最重要的操作之一。这里主要讲一下KMP模式匹配算法（即克努特-莫里斯-普拉特算法）。 1、前缀值求解在进行KMP算法操作之前需要求解将要匹配的字符串的前缀值，表现为一个前缀数组。（有些书中称为next数组）第一步，前缀表下面是即将要匹配的字符串，先写出前缀表：第二步，求出前缀值">
+<meta name="twitter:description" content="@TOC学习到串这一章，碰到一个不太好理解的算法，记录一下。 数据结构：串； 字串的定位操作通常称为串的模式匹配，算是串中最重要的操作之一。这里主要讲一下KMP模式匹配算法（即克努特-莫里斯-普拉特算法）。">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190327103519635.png#pic_center =200x200">
 
 
@@ -531,7 +531,7 @@
                 
               
 
-              <time title="创建时间：2019-09-30 22:16:23 / 修改时间：20:49:47" itemprop="dateCreated datePublished" datetime="2019-09-30T22:16:23+08:00">2019-09-30</time>
+              <time title="创建时间：2019-09-30 22:16:23 / 修改时间：21:17:35" itemprop="dateCreated datePublished" datetime="2019-09-30T22:16:23+08:00">2019-09-30</time>
             
 
             
@@ -643,6 +643,7 @@
         <p>@<a href="KMP模式匹配算法">TOC</a><br>学习到串这一章，碰到一个不太好理解的算法，记录一下。</p>
 <p>数据结构：<strong>串</strong>；</p>
 <p>字串的<strong>定位操作</strong>通常称为串的模式匹配，算是串中最重要的操作之一。这里主要讲一下KMP模式匹配算法（即<strong>克努特-莫里斯-普拉特算法</strong>）。</p>
+<a id="more"></a>
 <h2 id="1、前缀值求解"><a href="#1、前缀值求解" class="headerlink" title="1、前缀值求解"></a>1、前缀值求解</h2><p>在进行KMP算法操作之前需要求解将要匹配的字符串的<strong>前缀值</strong>，表现为一个前缀数组。（有些书中称为next数组）<br><strong>第一步，前缀表</strong><br>下面是即将要匹配的字符串，先写出前缀表：<br><img src="https://img-blog.csdnimg.cn/20190327103519635.png#pic_center =200x200" alt="在这里插入图片描述"><br><strong>第二步，求出前缀值</strong><br>把每个前缀当成独立的字符串，找出最长的公共的前后缀，并且这个前后缀是比原始字符串要短；<br><img src="https://img-blog.csdnimg.cn/20190327103954172.png#pic_center =500x250" alt="在这里插入图片描述"><br>然后，将最后一行删除，因为最后的字符串就是其本身，同时在最前面添加一个-1。<br>这样就构成了前缀数组：-1，0，0，1，2；</p>
 <p><strong>进行匹配</strong><br><img src="https://img-blog.csdnimg.cn/20190327104404752.png#pic_center =500x250" alt="在这里插入图片描述"><br>当出现匹配失败时（如上图），查找失配位置的前缀值，比如上图匹配a和b失败，当前的前缀值是1（即图中红色的圆圈处），所以转到匹配字符串下标为1的位置（即图中绿色的圆圈处）。<br>此时，将P串后移，使得红叉和绿圈对齐，从这里继续开始匹配。<br>绿圈之前的字符不再需要匹配，因为前面一定是匹配的，不需要验证了。（这就是KMP算法相对于朴素匹配算法的优势）<br><strong>第三步，前缀实现</strong><br>下图是前缀值求解的算法图解：<br><img src="https://img-blog.csdnimg.cn/20190327105635605.png#pic_center =600x300" alt="在这里插入图片描述"><br>在上图中，下标为6的位置的前缀值怎么求解？</p>
 <p><img src="https://img-blog.csdnimg.cn/20190327105221318.png#pic_center =600x300" alt="在这里插入图片描述"><br>通过观察6位置之前的字符串，发现5处的前缀值为1，要使6处的前缀值为2，只有其位置的字符为B。所以，需要做的就是检查一下，6处的字符是不是B。<br>len——字符串达到的最大的长度；<br>其实现为：</p>
@@ -730,8 +731,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/17/spring-boot-autowired-by-condition/" rel="next" title="Spring Boot - 根据配置动态注入Bean">
-                <i class="fa fa-chevron-left"></i> Spring Boot - 根据配置动态注入Bean
+              <a href="/2019/09/30/LineRegression/" rel="next" title="机器学习-线性回归">
+                <i class="fa fa-chevron-left"></i> 机器学习-线性回归
               </a>
             
           </div>
@@ -815,7 +816,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -838,9 +839,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -875,21 +874,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">16</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -967,11 +952,7 @@
                   </li>
                 
                   <li>
-                    <a href="/2019/06/17/spring-boot-autowired-by-condition/" title="Spring Boot - 根据配置动态注入Bean" target="_blank">Spring Boot - 根据配置动态注入Bean</a>
-                  </li>
-                
-                  <li>
-                    <a href="/2019/06/12/spring-boot-configure-external/" title="Spring Boot - 配置文件外置" target="_blank">Spring Boot - 配置文件外置</a>
+                    <a href="/2019/09/30/LineRegression/" title="机器学习-线性回归" target="_blank">机器学习-线性回归</a>
                   </li>
                 
                   <li>
@@ -980,6 +961,10 @@
                 
                   <li>
                     <a href="/2019/05/19/hexo-function-optimization/" title="Hexo+NexT(v7.0+) 搭建博客：功能强化" target="_blank">Hexo+NexT(v7.0+) 搭建博客：功能强化</a>
+                  </li>
+                
+                  <li>
+                    <a href="/2019/05/18/hexo-content-optimization/" title="Hexo+NexT(v7.0+) 搭建博客：内容优化" target="_blank">Hexo+NexT(v7.0+) 搭建博客：内容优化</a>
                   </li>
                 
               </ul>

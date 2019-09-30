@@ -184,7 +184,7 @@
 <meta property="og:image" content="https://image.chingow.cn/images/20190602011504_NtvIUD_Screenshot.jpeg?600x">
 <meta property="og:image" content="https://image.chingow.cn/images/20190602012005_lHglf5_Screenshot.jpeg?140x">
 <meta property="og:image" content="https://image.chingow.cn/images/20190602170547_O2y1Oe_Screenshot.jpeg?600x">
-<meta property="og:updated_time" content="2019-06-19T23:53:12.000Z">
+<meta property="og:updated_time" content="2019-09-30T12:59:01.308Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+NexT(v7.0+) 搭建博客：内容优化">
 <meta name="twitter:description" content="NexT主题内提供了很多功能来让内容更加丰富，本文介绍了如何开启和定制这些功能，主要包括:  模板设置 文章发布修改时间、字数统计 文章版权声明 链接样式、底部标签样式 图片尺寸处理 代码块复制、显示和隐藏 草稿和发布">
@@ -542,7 +542,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-20 07:53:12" itemprop="dateModified" datetime="2019-06-20T07:53:12+08:00">2019-06-20</time>
+                <time title="修改时间：2019-09-30 20:59:01" itemprop="dateModified" datetime="2019-09-30T20:59:01+08:00">2019-09-30</time>
               
             
           </span>
@@ -714,12 +714,9 @@
 <p>搜索的按钮有点移位，在自定义样式文件中调整样式：</p>
 <figure class="highlight css"><figcaption><span>themes\next\source\css\_custom\custom.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 复制按钮样式top调整</span><br><span class="line"><span class="selector-class">.highlight-wrap</span> <span class="selector-class">.copy-btn</span> &#123;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">1px</span> <span class="number">6px</span>;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">3px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="代码块显示和隐藏"><a href="#代码块显示和隐藏" class="headerlink" title="代码块显示和隐藏"></a>代码块显示和隐藏</h2><p>—- 待完成 —-</p>
-<h2 id="草稿和发布"><a href="#草稿和发布" class="headerlink" title="草稿和发布"></a>草稿和发布</h2><p id="div-border-left-blue">一般我们使用` hexo new <title> `来建立文章，这种建立方法会将新文章建立在 **source/_posts** 目录下，当使用 hexo generate 编译文件时，会将其 HTML 结果编译在 public 目录下，之后` hexo server `将会把 public 目录下所有文章发布。</title></p>
-
-<div class="note danger">
+<h2 id="草稿和发布"><a href="#草稿和发布" class="headerlink" title="草稿和发布"></a>草稿和发布</h2><p></p><p id="div-border-left-blue">一般我们使用` hexo new <title> `来建立文章，这种建立方法会将新文章建立在 **source/_posts** 目录下，当使用 hexo generate 编译文件时，会将其 HTML 结果编译在 public 目录下，之后` hexo server `将会把 public 目录下所有文章发布。</title></p><br><div class="note danger">
             <p>这种建立文章方式是有缺点的！写文章的人都知道，一篇文章从创作到发布需要经过多次润色，若我们的文章还在创作润色中，尚未编辑完成，执行 <strong>hexo server</strong> 时也会随着一起发布，这样对读者是不友好的。</p>
-          </div>
-<p>Hexo 另外提供 draft 机制，它的原理是新文章将建立在 <strong>source/_drafts</strong> 目录下，因此并不会将其编译到 public 目录下发布，而且提供了很友好的预览功能。</p>
+          </div><br>Hexo 另外提供 draft 机制，它的原理是新文章将建立在 <strong>source/_drafts</strong> 目录下，因此并不会将其编译到 public 目录下发布，而且提供了很友好的预览功能。<p></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new draft &lt;title&gt;	<span class="comment"># 新建草稿文章</span></span><br><span class="line">$ hexo s --draft	        <span class="comment"># 预览草稿文章</span></span><br></pre></td></tr></table></figure>
 <p>将草稿发布为正式文章：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo P &lt;filename&gt;</span><br></pre></td></tr></table></figure>
@@ -781,32 +778,6 @@
     
     
 
-    
-      <div>
-        
-
-
-
-
-  
-
-
-
-<ul class="post-copyright">
-  <li class="post-copyright-title">
-    <strong>本文标题：</strong>Hexo+NexT(v7.0+) 搭建博客：内容优化</li>
-  <li class="post-copyright-author">
-    <strong>文章作者： </strong>小木子</li>
-  <li class="post-copyright-link">
-    <strong>原始链接：</strong>
-    
-    <a href="https://ligang-chn.github.io/2019/05/18/hexo-content-optimization/" title="Hexo+NexT(v7.0+) 搭建博客：内容优化">https://ligang-chn.github.io/2019/05/18/hexo-content-optimization/</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>许可协议： </strong>本文章采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议，转载请保留原文链接及作者。</li>
-</ul>
-
-      </div>
     
 
     <footer class="post-footer">
@@ -917,7 +888,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -940,9 +911,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -977,21 +946,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">16</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1069,11 +1024,7 @@
                   </li>
                 
                   <li>
-                    <a href="/2019/06/17/spring-boot-autowired-by-condition/" title="Spring Boot - 根据配置动态注入Bean" target="_blank">Spring Boot - 根据配置动态注入Bean</a>
-                  </li>
-                
-                  <li>
-                    <a href="/2019/06/12/spring-boot-configure-external/" title="Spring Boot - 配置文件外置" target="_blank">Spring Boot - 配置文件外置</a>
+                    <a href="/2019/09/30/LineRegression/" title="机器学习-线性回归" target="_blank">机器学习-线性回归</a>
                   </li>
                 
                   <li>
@@ -1082,6 +1033,10 @@
                 
                   <li>
                     <a href="/2019/05/19/hexo-function-optimization/" title="Hexo+NexT(v7.0+) 搭建博客：功能强化" target="_blank">Hexo+NexT(v7.0+) 搭建博客：功能强化</a>
+                  </li>
+                
+                  <li>
+                    <a href="/2019/05/18/hexo-content-optimization/" title="Hexo+NexT(v7.0+) 搭建博客：内容优化" target="_blank">Hexo+NexT(v7.0+) 搭建博客：内容优化</a>
                   </li>
                 
               </ul>
