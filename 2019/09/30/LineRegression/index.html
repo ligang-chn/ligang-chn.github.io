@@ -172,17 +172,17 @@
 
 
 
-  <meta name="description" content="​        线性回归——一种有监督的学习算法，即在建模过程中必须同时具备自变量x和因变量y。更为概括地说，线性模型就是对输入特征加权求和，再加上一个我们称为偏置项的常数。 ​        两种不同的训练模型的方法：  通过“闭式”方程——直接计算出最适合训练集的模型参数（也就是使训练集上的成本函数最小化的模型参数）。 使用迭代优化的方法，即梯度下降法（GD）。逐渐调整模型参数直至训练集上的">
+  <meta name="description" content="​        线性回归——一种有监督的学习算法，即在建模过程中必须同时具备自变量x和因变量y。更为概括地说，线性模型就是对输入特征加权求和，再加上一个我们称为偏置项的常数。">
 <meta name="keywords" content="机器学习,梯度下降法,Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="机器学习-线性回归">
 <meta property="og:url" content="https://ligang-chn.github.io/2019/09/30/LineRegression/index.html">
 <meta property="og:site_name" content="LiGang&#39;s Blog">
-<meta property="og:description" content="​        线性回归——一种有监督的学习算法，即在建模过程中必须同时具备自变量x和因变量y。更为概括地说，线性模型就是对输入特征加权求和，再加上一个我们称为偏置项的常数。 ​        两种不同的训练模型的方法：  通过“闭式”方程——直接计算出最适合训练集的模型参数（也就是使训练集上的成本函数最小化的模型参数）。 使用迭代优化的方法，即梯度下降法（GD）。逐渐调整模型参数直至训练集上的">
+<meta property="og:description" content="​        线性回归——一种有监督的学习算法，即在建模过程中必须同时具备自变量x和因变量y。更为概括地说，线性模型就是对输入特征加权求和，再加上一个我们称为偏置项的常数。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190913141802837.png?80">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190913141833519.png">
-<meta property="og:image" content="https://ligang-chn.github.io/2019/09/30/LineRegression/LineRegression.assets/20190913141935781.png?80">
+<meta property="og:image" content="https://ligang-chn.github.io/2019/09/30/LineRegression/LineRegression.assets/20190913141935781.png?40">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190913141935781.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzM0MzgwMw==,size_9,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190913142114758.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzM0MzgwMw==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190913142126409.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzM0MzgwMw==,size_16,color_FFFFFF,t_70">
@@ -237,10 +237,10 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190913144951792.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzM0MzgwMw==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/2019091314494256.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzM0MzgwMw==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190913144924195.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzM0MzgwMw==,size_16,color_FFFFFF,t_70">
-<meta property="og:updated_time" content="2019-09-30T14:54:44.581Z">
+<meta property="og:updated_time" content="2019-09-30T15:02:25.113Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习-线性回归">
-<meta name="twitter:description" content="​        线性回归——一种有监督的学习算法，即在建模过程中必须同时具备自变量x和因变量y。更为概括地说，线性模型就是对输入特征加权求和，再加上一个我们称为偏置项的常数。 ​        两种不同的训练模型的方法：  通过“闭式”方程——直接计算出最适合训练集的模型参数（也就是使训练集上的成本函数最小化的模型参数）。 使用迭代优化的方法，即梯度下降法（GD）。逐渐调整模型参数直至训练集上的">
+<meta name="twitter:description" content="​        线性回归——一种有监督的学习算法，即在建模过程中必须同时具备自变量x和因变量y。更为概括地说，线性模型就是对输入特征加权求和，再加上一个我们称为偏置项的常数。">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190913141802837.png?80">
 
 
@@ -582,7 +582,7 @@
                 
               
 
-              <time title="创建时间：2019-09-30 22:16:23 / 修改时间：22:54:44" itemprop="dateCreated datePublished" datetime="2019-09-30T22:16:23+08:00">2019-09-30</time>
+              <time title="创建时间：2019-09-30 22:16:23 / 修改时间：23:02:25" itemprop="dateCreated datePublished" datetime="2019-09-30T22:16:23+08:00">2019-09-30</time>
             
 
             
@@ -692,6 +692,7 @@
 
       
         <p>​        线性回归——一种有监督的学习算法，即在建模过程中必须同时具备自变量x和因变量y。更为概括地说，线性模型就是对输入特征加权求和，再加上一个我们称为偏置项的常数。</p>
+<a id="more"></a>
 <p>​        <strong>两种不同的训练模型的方法</strong>：</p>
 <ul>
 <li>通过“闭式”方程——直接计算出最适合训练集的模型参数（也就是使训练集上的成本函数最小化的模型参数）。</li>
@@ -711,7 +712,7 @@ y=ax+b+\xi</script><p>​        类似于一次函数，其中$\xi$为模型的
 <script type="math/tex; mode=display">
 J(a,b)=\sum^{n} _{i=1} {\xi^2}=\sum^{n}_{i=1}{(y_i-ax_i-b)^2}</script><p>​        上面的函数可以称为<code>损失函数（loss function)</code>或<code>效用函数（utility function）</code>。通过分析问题，确定问题的损失函数或者效用函数；通过最优化损失函数或者效用函数，获得机器学习的模型。</p>
 <p>​        求解误差项最小就是求解$J(a,b)$的最小值。该目标函数其实就是一个二元二次函数，可以使用偏导数的方法求解出a和b，进而得到目标函数的最小值。（这里可能你会有疑问：为什么求出a和b，就能得到目标函数的最小值？——这是因为这里我们已知x和y，自变量其实是a和b，J是因变量，所以要求J的最小值，自然需要对a和b求偏导。对于损失函数、代价函数、目标函数的理解参见博客：<a href="https://www.cnblogs.com/geaozhang/p/11442343.html#commentform" target="_blank" rel="noopener">理解代价函数</a>）<br>推到过程如下图：</p>
-<p><img src="LineRegression.assets/20190913141935781.png?80" alt></p>
+<p><img src="LineRegression.assets/20190913141935781.png?40" alt></p>
 <div align="center">    
  <img src="https://img-blog.csdnimg.cn/20190913141935781.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzM0MzgwMw==,size_9,color_FFFFFF,t_70" width="20%">
 </div>
