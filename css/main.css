@@ -1874,7 +1874,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #70556e;
+  background: #adbbd9;
 }
 .feed-link,
 .chat {
@@ -2738,9 +2738,6 @@ code {
 #menu .menu-item .fa {
   font-size: 16px;
 }
-section.posts-expand .post-body .fancybox {
-  display: none;
-}
 .posts-expand .post-title-link::before {
   background-image: linear-gradient(90deg, #1098ad 20%, #07b39b 60%, #6dba82 100%);
 }
@@ -2781,7 +2778,7 @@ section.posts-expand .post-body .fancybox {
 .posts-collapse {
   margin: 50px 0px;
 }
-@media (max-width: 1023px) {
+@media (max-width: 1080px) {
   .posts-collapse {
     margin: 50px 20px;
   }
@@ -2824,7 +2821,7 @@ span.exturl:hover {
   color: #1094e8;
 }
 .back-to-top .fa-arrow-up:before {
-  color: #2e9071;
+  color: #65ff6c;
 }
 .highlight-wrap .copy-btn {
   padding: 1px 6px;
