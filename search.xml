@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[KMP算法]]></title>
-    <url>%2F2019%2F09%2F30%2FKMP%2F</url>
-    <content type="text"><![CDATA[@TOC学习到串这一章，碰到一个不太好理解的算法，记录一下。 数据结构：串； 字串的定位操作通常称为串的模式匹配，算是串中最重要的操作之一。这里主要讲一下KMP模式匹配算法（即克努特-莫里斯-普拉特算法）。 1、前缀值求解在进行KMP算法操作之前需要求解将要匹配的字符串的前缀值，表现为一个前缀数组。（有些书中称为next数组）第一步，前缀表下面是即将要匹配的字符串，先写出前缀表：第二步，求出前缀值把每个前缀当成独立的字符串，找出最长的公共的前后缀，并且这个前后缀是比原始字符串要短；然后，将最后一行删除，因为最后的字符串就是其本身，同时在最前面添加一个-1。这样就构成了前缀数组：-1，0，0，1，2； 进行匹配当出现匹配失败时（如上图），查找失配位置的前缀值，比如上图匹配a和b失败，当前的前缀值是1（即图中红色的圆圈处），所以转到匹配字符串下标为1的位置（即图中绿色的圆圈处）。此时，将P串后移，使得红叉和绿圈对齐，从这里继续开始匹配。绿圈之前的字符不再需要匹配，因为前面一定是匹配的，不需要验证了。（这就是KMP算法相对于朴素匹配算法的优势）第三步，前缀实现下图是前缀值求解的算法图解：在上图中，下标为6的位置的前缀值怎么求解？ 通过观察6位置之前的字符串，发现5处的前缀值为1，要使6处的前缀值为2，只有其位置的字符为B。所以，需要做的就是检查一下，6处的字符是不是B。len——字符串达到的最大的长度；其实现为： 1234567891011121314151617181920212223// 前缀实现void prefix_table(char pattern[], int prefix[], int n) &#123; prefix[0] = 0; int len = 0; int i = 1; while (i &lt; n) &#123; if (pattern[i] == pattern[len]) &#123; len++; prefix[i] = len; i++; &#125; else &#123; if (len &gt; 0) &#123; len = prefix[len - 1]; &#125; else &#123; prefix[i] = len; i++; &#125; &#125; &#125;&#125; 12345678910// 将前缀数组后后移一位，方便后面KMP算法计算void move_prefix_table(int prefix[], int n)&#123; int i; for (i = n - 1; i &gt; 0; i--) &#123; prefix[i] = prefix[i - 1]; &#125; prefix[0] = -1;&#125; 2、KMP实现1234567891011121314151617181920212223242526272829void kmp_search(char text[], char pattern[])&#123; int n = strlen(pattern); //计算字符串长度 int * prefix = malloc(sizeof(int) * n);//内存分配 prefix_table(pattern, prefix, n);//前缀表求解 move_prefix_table(prefix, n);//前缀表移位 //text[i] ,len(text) =m; //pattern[j],len(pattrn) =n; while (i &lt; m) &#123; if (j == n - 1 &amp;&amp; text[i] == pattern[j]) &#123; printf("Found pattern at %d\n", i - j); j = prefix[j]; &#125; if (text[i] == pattern[j]) &#123; i++; j++; &#125; else &#123; j = prefix[j]; if (j == -1) &#123; i++; j++; &#125; &#125; &#125;&#125; 3、参考视频：https://www.bilibili.com/video/av11866460/?spm_id_from=333.788.videocard.0书籍：大话数据结构]]></content>
+    <title><![CDATA[国庆]]></title>
+    <url>%2F2019%2F10%2F01%2F%E5%9B%BD%E5%BA%86%2F</url>
+    <content type="text"><![CDATA[]]></content>
       <categories>
-        <category>数据结构</category>
+        <category>国庆</category>
       </categories>
-      <tags>
-        <tag>数据结构</tag>
-        <tag>KMP</tag>
-        <tag>C++</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[机器学习-线性回归]]></title>
@@ -24,6 +19,19 @@
         <tag>机器学习</tag>
         <tag>梯度下降法</tag>
         <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[KMP算法]]></title>
+    <url>%2F2019%2F09%2F30%2FKMP%2F</url>
+    <content type="text"><![CDATA[@TOC学习到串这一章，碰到一个不太好理解的算法，记录一下。 数据结构：串； 字串的定位操作通常称为串的模式匹配，算是串中最重要的操作之一。这里主要讲一下KMP模式匹配算法（即克努特-莫里斯-普拉特算法）。 1、前缀值求解在进行KMP算法操作之前需要求解将要匹配的字符串的前缀值，表现为一个前缀数组。（有些书中称为next数组）第一步，前缀表下面是即将要匹配的字符串，先写出前缀表：第二步，求出前缀值把每个前缀当成独立的字符串，找出最长的公共的前后缀，并且这个前后缀是比原始字符串要短；然后，将最后一行删除，因为最后的字符串就是其本身，同时在最前面添加一个-1。这样就构成了前缀数组：-1，0，0，1，2； 进行匹配当出现匹配失败时（如上图），查找失配位置的前缀值，比如上图匹配a和b失败，当前的前缀值是1（即图中红色的圆圈处），所以转到匹配字符串下标为1的位置（即图中绿色的圆圈处）。此时，将P串后移，使得红叉和绿圈对齐，从这里继续开始匹配。绿圈之前的字符不再需要匹配，因为前面一定是匹配的，不需要验证了。（这就是KMP算法相对于朴素匹配算法的优势）第三步，前缀实现下图是前缀值求解的算法图解：在上图中，下标为6的位置的前缀值怎么求解？ 通过观察6位置之前的字符串，发现5处的前缀值为1，要使6处的前缀值为2，只有其位置的字符为B。所以，需要做的就是检查一下，6处的字符是不是B。len——字符串达到的最大的长度；其实现为： 1234567891011121314151617181920212223// 前缀实现void prefix_table(char pattern[], int prefix[], int n) &#123; prefix[0] = 0; int len = 0; int i = 1; while (i &lt; n) &#123; if (pattern[i] == pattern[len]) &#123; len++; prefix[i] = len; i++; &#125; else &#123; if (len &gt; 0) &#123; len = prefix[len - 1]; &#125; else &#123; prefix[i] = len; i++; &#125; &#125; &#125;&#125; 12345678910// 将前缀数组后后移一位，方便后面KMP算法计算void move_prefix_table(int prefix[], int n)&#123; int i; for (i = n - 1; i &gt; 0; i--) &#123; prefix[i] = prefix[i - 1]; &#125; prefix[0] = -1;&#125; 2、KMP实现1234567891011121314151617181920212223242526272829void kmp_search(char text[], char pattern[])&#123; int n = strlen(pattern); //计算字符串长度 int * prefix = malloc(sizeof(int) * n);//内存分配 prefix_table(pattern, prefix, n);//前缀表求解 move_prefix_table(prefix, n);//前缀表移位 //text[i] ,len(text) =m; //pattern[j],len(pattrn) =n; while (i &lt; m) &#123; if (j == n - 1 &amp;&amp; text[i] == pattern[j]) &#123; printf("Found pattern at %d\n", i - j); j = prefix[j]; &#125; if (text[i] == pattern[j]) &#123; i++; j++; &#125; else &#123; j = prefix[j]; if (j == -1) &#123; i++; j++; &#125; &#125; &#125;&#125; 3、参考视频：https://www.bilibili.com/video/av11866460/?spm_id_from=333.788.videocard.0书籍：大话数据结构]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+        <tag>KMP</tag>
+        <tag>C++</tag>
       </tags>
   </entry>
   <entry>
