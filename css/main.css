@@ -1874,7 +1874,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ba1dff;
+  background: #0af7eb;
 }
 .feed-link,
 .chat {
@@ -2824,7 +2824,7 @@ span.exturl:hover {
   color: #1094e8;
 }
 .back-to-top .fa-arrow-up:before {
-  color: #4520ff;
+  color: #4a44a7;
 }
 .highlight-wrap .copy-btn {
   padding: 1px 6px;
